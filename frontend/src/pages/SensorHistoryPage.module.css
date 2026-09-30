@@ -1,0 +1,130 @@
+.page {
+  display: grid;
+  gap: 16px;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 12px;
+}
+
+.toolbarFilters {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.6fr) minmax(160px, 0.8fr) minmax(190px, 1fr);
+  gap: 12px;
+}
+
+.searchField,
+.sensorFilter,
+.valueFilter {
+  min-width: 0;
+}
+
+.sortButton {
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: #ffffff;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.card {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.tableWrap {
+  overflow: auto;
+}
+
+.table th {
+  padding: 15px 14px;
+  color: var(--text-muted);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border);
+}
+
+.table td {
+  padding: 14px;
+  border-bottom: 1px solid #edf1f7;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #fafbff;
+}
+
+.sensorCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sensorIcon {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(98, 104, 239, 0.12);
+  color: var(--accent);
+}
+
+.footerRow {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.pageSizeControl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+}
+
+.pageSizeSelect {
+  width: 80px;
+}
+
+.inlineError {
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--danger-soft);
+  color: #dc2626;
+  font-weight: 600;
+}
+
+@media (max-width: 1180px) {
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbarFilters {
+    grid-template-columns: 1fr;
+  }
+}
